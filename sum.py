@@ -27,4 +27,7 @@ entry.pack(pady=5)
 button = tk.Button(window, text="계산", command=calculate_sum)
 button.pack(pady=10)
 
+# 엔터 키를 눌렀을 때도 calculate_sum 함수가 호출되도록 바인딩합니다.
+window.bind('<Return>', lambda event: calculate_sum())
+
 window.mainloop()
